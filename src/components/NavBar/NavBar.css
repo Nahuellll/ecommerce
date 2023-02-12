@@ -1,0 +1,38 @@
+.navContainer{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:transparent;
+}
+
+
+
+.navBrand{
+    width:16vw;
+    height: max-content;
+}
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.navLinks  a{
+    font-size: large;
+    margin: 15px;
+    text-decoration: none;
+    width: 100px;
+
+}
+
+.claseActive{
+    color: rgb(235, 13, 235)
+}
+.claseInactive{
+    color: gray;
+}

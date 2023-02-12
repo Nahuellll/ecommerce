@@ -1,0 +1,29 @@
+.cardProduct{
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    padding: 1px;
+    background-color:lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardProduct h4, p{
+    font-size:20px;
+    color: black;
+}
+.cardProduct img{
+    height: auto;
+    width: 100%;
+}
+.buttonDetail{
+    font-size: 16px;
+    padding: 2px;
+    border-color: transparent;
+    border-radius: 5px;
+    background-color: rgb(72, 72, 245);
+    color: white;
+    margin: 5px;
+}

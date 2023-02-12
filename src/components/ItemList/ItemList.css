@@ -1,0 +1,14 @@
+.listaProd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    width: 90%;
+    height: auto;
+}
+
+.titles{
+    font-size: 40px;
+    color:black;
+}
