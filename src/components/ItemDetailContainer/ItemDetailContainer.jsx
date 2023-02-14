@@ -4,6 +4,8 @@ import { arregloProductos } from "../baseDatos/baseDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
+
+//recibimos el id por ruta con useParams
 export const ItemDetailContainer = ()=>{
     const {productId} = useParams();
 

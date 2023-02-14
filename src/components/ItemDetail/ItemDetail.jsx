@@ -5,6 +5,8 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import {Link} from 'react-router-dom';
 
+
+// traemos la data con context, con useState modificamos la cantidad y link a /cart
 export const ItemDetail = ({item})=>{
     const {addProduct} = useContext(CartContext);
     const [quantity, setQuantity] = useState(0);

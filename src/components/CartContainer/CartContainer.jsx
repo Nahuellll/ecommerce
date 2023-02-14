@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { CartItem } from '../CartItem/CartItem';
+import { Link } from 'react-router-dom';
 
 export const CartContainer = () => {
   const {productCartList, clearProductCartList} = useContext(CartContext);
@@ -20,6 +21,9 @@ export const CartContainer = () => {
             }
             <hr/>
             <button  className='buttonDetail' onClick={clearProductCartList}>Vaciar el carrito</button>
+              <Link to="/">
+                <button className='buttonDetail'>seguir comprando</button>
+              </Link>
           </>
           :
           <p>No has agregado productos</p>

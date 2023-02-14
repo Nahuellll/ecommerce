@@ -1,7 +1,7 @@
 import './Item.css';
 import {Link} from 'react-router-dom';
 
-//card con los link a detalles e item
+//card con los link a /item
 export const Item = ({item})=>{
     return(
         <div className="cardProduct">

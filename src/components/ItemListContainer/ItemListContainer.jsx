@@ -11,6 +11,8 @@ export const ItemListContainer = ()=>{
 
     const [productos, setProductos] = useState([]);
 
+
+    //set time out para retraso de red
     const promesa = new Promise((resolve, reject)=>{
         setTimeout(() => {
             resolve(arregloProductos);

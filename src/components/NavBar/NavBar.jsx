@@ -15,14 +15,10 @@ export const Navbar = () =>{
                 </div>
             </Link>
             <div className='navLinks'>
-                <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
-                to="/">Inicio</NavLink>
-                <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
-                to="/productos/Cordoba">Cordoba</NavLink>
-                <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
-                to="/productos/Mendoza">Mendoza</NavLink>
-                    <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
-                to="/productos/Otros">Otros</NavLink>
+                <NavLink to="/">Inicio</NavLink>
+                <NavLink to="/productos/Cordoba">Cordoba</NavLink>
+                <NavLink to="/productos/Mendoza">Mendoza</NavLink>
+                <NavLink to="/productos/Otros">Otros</NavLink>
             </div>
             <div>
                 <CartWidget/>

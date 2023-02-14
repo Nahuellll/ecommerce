@@ -1,10 +1,13 @@
 import { createContext, useState } from "react";
-
+//creamos nuestro contexto
 export const CartContext = createContext();
 
+
+//provider pasa nuestros productos a todos sus hijos 
 export const CartProvider = ({children})=>{
     const [productCartList, setProductCartList] = useState([]);
-
+    
+//verifico si el producto existe en el arreglo
     const isInCart = (id)=>{
         const elementExists = productCartList.some((elemento)=>elemento.id === id);
         return elementExists;
@@ -12,7 +15,7 @@ export const CartProvider = ({children})=>{
 
     const addProduct = (product, qty)=>{
         const newList = [...productCartList];
-        //verifico si el producto existe en el arreglo
+
         // si existe, actualice la propiedad quantity de ese producto
         if(isInCart(product.id)){
             const productIndex = productCartList.findIndex(element=>element.id===product.id);

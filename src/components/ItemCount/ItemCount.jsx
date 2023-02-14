@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import './ItemCount.css';
 
+
+//funcion que aumenta o disminuye  el contador del producto/item
 export const ItemCount = ({stock, initial, onAdd})=>{
     const [count, setCount] = useState(initial);
 

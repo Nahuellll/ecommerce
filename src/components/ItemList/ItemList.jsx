@@ -3,7 +3,7 @@ import './ItemList.css';
 /* import {Link} from 'react-router-dom';
  */
 
-//lista de productos recorrida con metodo map 
+//lista de productos recorrida con metodo map
 export const ItemList = ({items})=>{
 
     return(
