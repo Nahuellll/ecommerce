@@ -4,32 +4,55 @@ import { arregloProductos } from "../baseDatos/baseDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
+import {getFirestore,doc,getDoc} from 'firebase/firestore'
+
 
 //recibimos el id por ruta con useParams
+// export const ItemDetailContainer = ()=>{
+//     const {productId} = useParams();
+
+//     const [item, setItem] = useState({});
+
+//     const getItem = (id)=>{
+//         return new Promise((resolve, reject)=>{
+//             const product = arregloProductos.find(item=>item.id === parseInt(id));
+//             resolve(product)
+//         })
+//     }
+
+//     useEffect(()=>{
+//         const getProducto = async()=>{
+//             const producto = await getItem(productId);
+//             setItem(producto);
+//         }
+//         getProducto();
+//     },[productId])
+
+//     return(
+//         <div className="item-detail-container">
+//             <p style={{width:"100%", color: "white"}}></p>
+//             <ItemDetail item={item}/>
+//         </div>
+//     )
+// }
+
+
 export const ItemDetailContainer = ()=>{
+    const [item,setItem] = useState({});
     const {productId} = useParams();
 
-    const [item, setItem] = useState({});
+useEffect(() => {
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb,'items','598OBtEj5UM5OkNa1wGm');
+    getDoc(queryDoc)
+    .then(resp => console.log(resp))
+}, [])
 
-    const getItem = (id)=>{
-        return new Promise((resolve, reject)=>{
-            const product = arregloProductos.find(item=>item.id === parseInt(id));
-            resolve(product)
-        })
-    }
-
-    useEffect(()=>{
-        const getProducto = async()=>{
-            const producto = await getItem(productId);
-            setItem(producto);
-        }
-        getProducto();
-    },[productId])
-
-    return(
+   return(
         <div className="item-detail-container">
-            <p style={{width:"100%", color: "white"}}></p>
+             <p style={{width:"100%", color: "white"}}></p>
             <ItemDetail item={item}/>
         </div>
     )
+
 }
